@@ -5,6 +5,11 @@
   "keywords": [
     "color",
     "object",
+    "lighten",
+    "darken",
+    "hex",
+    "rgb",
+    "rgba",
     "css"
   ],
   "repository": {
@@ -31,10 +36,12 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@chriscodesthings/random""@chriscodesthings/is-css-hex-color": "*",
+    "@chriscodesthings/random-css-hex-color": "*",
+    "@chriscodesthings/is-css-hex-color": "*",
     "@chriscodesthings/css-hex-color-to-rgba": "*"
   },
   "devDependencies": {
+    "@chriscodesthings/rgb-color-is-dark": "*",
     "auto-changelog": "*",
     "jest": "*"
   },

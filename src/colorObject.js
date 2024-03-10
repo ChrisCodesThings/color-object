@@ -1,15 +1,17 @@
+import randomHexColor from '@chriscodesthings/random-css-hex-color';
 import isCSSHexColor from '@chriscodesthings/is-css-hex-color';
+import hexToRGBA from '@chriscodesthings/css-hex-color-to-rgba';
+
+import looksLikeRGBA from '../lib/lookslikergba.js';
 
 export default class Color {
-    #rgba;
-    #format;
+    #rgba = [];
 
-    constructor(col = colourRandomRGB(true)) {
+    constructor(col = randomHexColor(true)) {
         if (typeof col === 'boolean') {
-            col = colourRandomRGB(col);
+            col = randomHexColor(col);
         }
 
-        this.#format = colourType(col);
         this.set(col);
     }
 
@@ -18,39 +20,25 @@ export default class Color {
     }
 
     toString() {
-        if (this.#format == "rgb") {
-            return (
-                "rgb("
-                    + this.#rgba[0] + " "
-                    + this.#rgba[1] + " "
-                    + this.#rgba[2]
-                    + this.#rgba != 1 ? " / " + Math.round(this.#rgba[3] * 100) + "%" : ""
-                + ")"
-            );
-        }
-
-        if (this.#format == "hex") {
-            return colourRGBToHex(this.#rgba);
-        }
     }
 
     toJSON() {
-        if (this.#format == "rgb") {
-            return JSON.stringify(this.#rgba);
-        }
-
-        if (this.#format == "hex") {
-            return colourRGBToHex(this.#rgba);
-        }
     }
 
     set(col) {
-        this.#rgba = colourResolveTo(col, "rgba");
+        if (isCSSHexColor(col)) {
+            col = hexToRGBA(col);
+        }
+
+        if (looksLikeRGBA(col)) {
+            this.#rgba = [...col, 1].slice(0, 4);
+            return true;
+        }
+
+        this.#rgba = [0, 0, 0, 1];
     }
 
-    fade(f) {
-        return colourResolveTo(colourFade(this.#rgba, f), this.#format);
-    }
+    asRGBA() { return this.#rgba; }
 }
 
 // https://24ways.org/2010/calculating-color-contrast
