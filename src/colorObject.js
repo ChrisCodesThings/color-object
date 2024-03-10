@@ -38,7 +38,7 @@ export default class Color {
         this.#rgba = [0, 0, 0, 1];
     }
 
-    asRGBA() { return this.#rgba; }
+    export() { return this.#rgba; }
 }
 
 // https://24ways.org/2010/calculating-color-contrast

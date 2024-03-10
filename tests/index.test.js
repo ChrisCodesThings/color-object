@@ -45,42 +45,42 @@ describe("test lookslikergba", () => {
 describe("test initialization types", () => {
     test("should be a random colour", async () => {
         const col = new Color();
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(looksLikeRGBA(rgba)).toEqual(true);
     });
 
     test("should be cornflowerblue", async () => {
         const col = new Color("#6495ed");
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(rgba).toEqual([100, 149, 237, 1]);
     });
 
     test("should be transparent cornflowerblue", async () => {
         const col = new Color("#6495ed7f");
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(rgba).toEqual([100, 149, 237, 0.5]);
     });
 
     test("should be a dark colour", async () => {
         const col = new Color(true);
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(isDark(...rgba)).toEqual(true);
     });
 
     test("should be as rgba given", async () => {
         const col = new Color([12, 34, 56, 0.78]);
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(rgba).toEqual([12, 34, 56, 0.78]);
     });
 
     test("invalid input, should be black", async () => {
         const col = new Color("not a colour");
-        const rgba = col.asRGBA();
+        const rgba = col.export();
 
         expect(rgba).toEqual([0, 0, 0, 1]);
     });
