@@ -1,7 +1,7 @@
 const { default: isCSSHexColor } = await import("@chriscodesthings/is-css-hex-color");
 const { default: isDark } = await import("@chriscodesthings/rgb-color-is-dark");
 
-const { default: looksLikeRGBA } = await import("../lib/lookslikergba");
+const { default: looksLikeRGBA } = await import("../common/lookslikergba");
 const { default: Color } = await import("../");
 
 describe("test lookslikergba", () => {

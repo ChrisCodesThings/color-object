@@ -2,7 +2,7 @@ import randomHexColor from '@chriscodesthings/random-css-hex-color';
 import isCSSHexColor from '@chriscodesthings/is-css-hex-color';
 import hexToRGBA from '@chriscodesthings/css-hex-color-to-rgba';
 
-import looksLikeRGBA from '../lib/lookslikergba.js';
+import looksLikeRGBA from '../common/lookslikergba.js';
 
 export default class Color {
     #rgba = [];
