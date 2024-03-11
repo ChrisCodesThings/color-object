@@ -1,8 +1,8 @@
 import randomHexColor from '@chriscodesthings/random-css-hex-color';
 import isCSSHexColor from '@chriscodesthings/is-css-hex-color';
 import hexToRGBA from '@chriscodesthings/css-hex-color-to-rgba';
-
-import looksLikeRGBA from '../common/lookslikergba.js';
+import looksLikeRGBA from '@chriscodesthings/color-looks-like-rgba';
+import rgbaToHex from '@chriscodesthings/rgba-color-to-css-hex';
 
 export default class Color {
     #rgba = [];
@@ -19,11 +19,8 @@ export default class Color {
         return 'Color';
     }
 
-    toString() {
-    }
-
-    toJSON() {
-    }
+    toString() { return this.asHex(); }
+    toJSON() { return this.asHex(); }
 
     set(col) {
         if (isCSSHexColor(col)) {
@@ -39,6 +36,7 @@ export default class Color {
     }
 
     export() { return this.#rgba; }
+    asHex() { return rgbaToHex(this.#rgba); }
 }
 
 // https://24ways.org/2010/calculating-color-contrast
