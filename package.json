@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "description": "Simple, lightweight class to manipulate a color and convert between formats",
   "keywords": [
+    "lightweight",
     "color",
     "object",
     "lighten",
@@ -36,14 +37,16 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "@chriscodesthings/random-css-hex-color": "*",
-    "@chriscodesthings/is-css-hex-color": "*",
-    "@chriscodesthings/css-hex-color-to-rgba": "*"
+    "@chriscodesthings/random-css-hex-color": "^1.0.0",
+    "@chriscodesthings/is-css-hex-color": "^1.0.1",
+    "@chriscodesthings/css-hex-color-to-rgba": "^1.0.0",
+    "@chriscodesthings/color-looks-like-rgba": "^1.0.0",
+    "@chriscodesthings/rgba-color-to-css-hex": "^1.0.0"
   },
   "devDependencies": {
-    "@chriscodesthings/rgb-color-is-dark": "*",
-    "auto-changelog": "*",
-    "jest": "*"
+    "@chriscodesthings/rgb-color-is-dark": "^1.0.0",
+    "auto-changelog": "^2.4.0",
+    "jest": "^29.7.0"
   },
   "publishConfig": {
     "access": "public"
