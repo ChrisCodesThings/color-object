@@ -1,6 +1,6 @@
 # color-object &middot; [![Test workflow status](https://github.com/ChrisCodesThings/color-object/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/color-object)](https://www.npmjs.com/package/@chriscodesthings/color-object) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **Class to store and manipulate a color**
+> **Simple, lightweight class to manipulate a color and convert between formats**
 
 ## Install
 
