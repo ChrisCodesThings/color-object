@@ -1,6 +1,6 @@
 {
   "name": "@chriscodesthings/color-object",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "Simple, lightweight class to manipulate a color and convert between formats",
   "keywords": [
     "lightweight",
