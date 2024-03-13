@@ -3,6 +3,7 @@ import isCSSHexColor from '@chriscodesthings/is-css-hex-color';
 import hexToRGBA from '@chriscodesthings/css-hex-color-to-rgba';
 import looksLikeRGBA from '@chriscodesthings/color-looks-like-rgba';
 import rgbaToHex from '@chriscodesthings/rgba-color-to-css-hex';
+import colorFade from '@chriscodesthings/rgb-color-fade';
 
 export default class Color {
     #rgba = [];
@@ -35,8 +36,15 @@ export default class Color {
         this.#rgba = [0, 0, 0, 1];
     }
 
-    export() { return this.#rgba; }
+    asRGBA() { return this.#rgba; }
     asHex() { return rgbaToHex(this.#rgba); }
+
+    fade(f) {
+        const faded = colorFade(this.#rgba, f);
+        const hex = rgbaToHex(faded);
+        console.log("fade", this.#rgba, "faded", faded, "hex", hex);
+        return hex;
+    }
 }
 
 // https://24ways.org/2010/calculating-color-contrast
