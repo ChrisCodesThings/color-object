@@ -41,7 +41,8 @@
     "@chriscodesthings/is-css-hex-color": "^1.0.1",
     "@chriscodesthings/css-hex-color-to-rgba": "^1.0.0",
     "@chriscodesthings/color-looks-like-rgba": "^1.0.0",
-    "@chriscodesthings/rgba-color-to-css-hex": "^1.0.0"
+    "@chriscodesthings/rgba-color-to-css-hex": "^1.0.0",
+    "@chriscodesthings/rgb-color-fade": "^1.0.0"
   },
   "devDependencies": {
     "@chriscodesthings/rgb-color-is-dark": "^1.0.0",
