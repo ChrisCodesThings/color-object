@@ -39,12 +39,7 @@ export default class Color {
     asRGBA() { return this.#rgba; }
     asHex() { return rgbaToHex(this.#rgba); }
 
-    fade(f) {
-        const faded = colorFade(this.#rgba, f);
-        const hex = rgbaToHex(faded);
-        console.log("fade", this.#rgba, "faded", faded, "hex", hex);
-        return hex;
-    }
+    fade(f) { return rgbaToHex(colorFade(this.#rgba, f)); }
 }
 
 // https://24ways.org/2010/calculating-color-contrast
