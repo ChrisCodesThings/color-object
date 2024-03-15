@@ -12,11 +12,8 @@ npm install --save @chriscodesthings/color-object
 
 The color object stores a color and provides methods for expressing the color in different formats and manipulating the color in different ways.
 
-- **Coercible**
-Use as a string to return a CSS hex color code.
-
-- **JSON Compatible**
-Use JSON.stringify to export color as a CSS hex color code.
+- **Coercible** - use as a string to return a CSS hex color code.
+- **JSON Compatible** - use JSON.stringify to export color as a CSS hex color code.
 
 ## Constructor
 
@@ -30,9 +27,12 @@ new Color(color);
 
 ### Parameters
 - *color* (optional):
+
 If omitted, a random color is generated. 
 If `true`, a random dark color is generated, if `false`, a random light color.
 A specific color can be specified as a CSS hex color code or as an array.
+
+> Note, if an invalid color is specified, the color defaults to black.
 
 ## Examples
 
@@ -69,6 +69,30 @@ new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
 
 ## set(color)
 
+### Description
+
+Sets the color.
+
+### Use
+
+```js
+const col = new Color();
+
+console.log(col.set([100, 149, 237]));  // cornflowerblue
+// => true
+```
+
+### Parameters
+- *color*: the color to set
+
+The color can be provided using the same rules as `Constructor`.
+
+### Returns
+
+Returns boolean `true` on success, `false` if the color provided isn't valid.
+
+> Note, if `false` is returned, the color is unmodified.
+
 ## asHex()
 
 ### Description
@@ -86,7 +110,7 @@ console.log(col.asHex());
 
 ### Returns
 
-Returns string containing CSS hex color code.
+Returns a string containing CSS hex color code.
 
 ## asRGBA()
 
@@ -126,9 +150,10 @@ console.log(col.fade(-50));
 
 ### Parameters
 - *pct*: the amount to fade the color by given as a percentage
+
 Positive numbers fade towards white, negative numbers fade towards black.
 100 will produce white, -100 will produce black.
 
 ### Returns
 
-A string containing the CSS hex color code of the faded color.
+Returns a string containing the CSS hex color code of the faded color.
