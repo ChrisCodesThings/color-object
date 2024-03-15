@@ -90,7 +90,7 @@ console.log(col.set([100, 149, 237]));  // cornflowerblue
 ### Parameters
 - *color*: the color to set
 
-The color can be provided using the same rules as `[Constructor](#constructor)`.
+The color can be provided using the same rules as ['Constructor'](#constructor).
 
 ### Returns
 
@@ -98,7 +98,9 @@ Returns boolean `true` on success, `false` if the color provided isn't valid.
 
 > Note, if `false` is returned, the color is unmodified.
 
-## asHex()
+---
+
+## asHex() &middot; [Methods](#methods)
 
 ### Description
 
@@ -117,7 +119,9 @@ console.log(col.asHex());
 
 Returns a string containing CSS hex color code.
 
-## asRGBA()
+---
+
+## asRGBA() &middot; [Methods](#methods)
 
 ### Description
 
@@ -138,7 +142,9 @@ Returns array containing `[red, green, blue, alpha]` values.
 
 > Note, the alpha value is always provided. If the color has no transparency set the alpha value will return 1.
 
-## fade(pct)
+---
+
+## fade(pct) &middot; [Methods](#methods)
 
 ### Description
 
