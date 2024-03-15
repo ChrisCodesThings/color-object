@@ -67,8 +67,11 @@ new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
 
 # Methods
 
-- [set()](#setcolor--methods)
-
+- [constructor()](#constructor) - create the `Color` object
+- [set()](#setcolor--methods) - set the color
+- [asHex()](#ashex--methods) - output as CSS hex color code
+- [asRGBA()](#asrgba--methods) - output as RGBA array
+- [fade()](#fadepct--methods) - fade the color
 
 ---
 
