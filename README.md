@@ -65,9 +65,14 @@ new Color([100, 149, 237]); // cornflowerblue
 new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
 ```
 
-# Methods
+# Methods {#methods}
 
-## set(color)
+- [set()](#set)
+
+
+---
+
+## set(color) {#set} &middot; [Methods](#methods)
 
 ### Description
 
