@@ -8,29 +8,127 @@
 npm install --save @chriscodesthings/color-object
 ```
 
-## Use
+## Description
+
+The color object stores a color and provides methods for expressing the color in different formats and manipulating the color in different ways.
+
+- **Coercible**
+Use as a string to return a CSS hex color code.
+
+- **JSON Compatible**
+Use JSON.stringify to export color as a CSS hex color code.
+
+## Constructor
+
+### Syntax
 
 ```js
-import stubRepo from '@chriscodesthings/color-object';
+import Color from '@chriscodesthings/color-object';
 
-console.log(stubRepo("hello world!"));
-// => true
-```
-
-## Syntax
-
-```js
-stubRepo(var);
+new Color(color);
 ```
 
 ### Parameters
+- *color* (optional):
+If omitted, a random color is generated. 
+If `true`, a random dark color is generated, if `false`, a random light color.
+A specific color can be specified as a CSS hex color code or as an array.
 
-- *var*: any
+## Examples
 
-### Return Value
+### Random Colors
 
-Returns something probably.
+If the first parameter is omitted or boolean `true/false` then a random color is generated.
 
-## Description
+```js
+new Color(); // Random color
+new Color(true); // Random dark color
+new Color(false); // Random dark color
+```
 
-Does what it says on the tin.
+### CSS Hex Color Code
+
+A CSS hex color code can be passed, in short or long form, with or without an alpha value.
+
+```js
+new Color("#639"); // rebeccapurple
+new Color("#6495ed"); // cornflowerblue
+new Color("#6495ed7f"); // cornflowerblue with 50% transparency
+```
+
+### RGB or RGBA Values
+
+An RGB or RGBA color can be passed in an array in the form `[red, green, blue, alpha (optional)]`, with or without the alpha value.
+
+```js
+new Color([100, 149, 237]); // cornflowerblue
+new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
+```
+
+# Methods
+
+## set(color)
+
+## asHex()
+
+### Description
+
+Outputs color as a CSS hex color code.
+
+### Use
+
+```js
+const col = new Color([100, 149, 237]); // cornflowerblue
+
+console.log(col.asHex());
+// => #6495ed
+```
+
+### Returns
+
+Returns string containing CSS hex color code.
+
+## asRGBA()
+
+### Description
+
+Outputs color as red, green, blue and alpha values.
+
+### Use
+
+```js
+const col = new Color([100, 149, 237]); // cornflowerblue
+
+console.log(col.asRGBA());
+// => [ 100, 149, 237, 1 ]
+```
+
+### Returns
+
+Returns array containing `[red, green, blue, alpha]` values.
+
+> Note, the alpha value is always provided. If the color has no transparency set the alpha value will return 1.
+
+## fade(pct)
+
+### Description
+
+Fades a color towards black or white by a given percentage.
+
+### Use
+
+```js
+const col = new Color([100, 149, 237]); // cornflowerblue
+
+console.log(col.fade(-50));
+// => #324b77
+```
+
+### Parameters
+- *pct*: the amount to fade the color by given as a percentage
+Positive numbers fade towards white, negative numbers fade towards black.
+100 will produce white, -100 will produce black.
+
+### Returns
+
+A string containing the CSS hex color code of the faded color.
