@@ -65,14 +65,14 @@ new Color([100, 149, 237]); // cornflowerblue
 new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
 ```
 
-# Methods {#methods}
+# Methods
 
-- [set()](#set)
+- [set()](#setcolor--methods)
 
 
 ---
 
-## set(color) {#set} &middot; [Methods](#methods)
+## set(color) &middot; [Methods](#methods)
 
 ### Description
 
@@ -90,7 +90,7 @@ console.log(col.set([100, 149, 237]));  // cornflowerblue
 ### Parameters
 - *color*: the color to set
 
-The color can be provided using the same rules as `Constructor`.
+The color can be provided using the same rules as `[Constructor](#constructor)`.
 
 ### Returns
 
