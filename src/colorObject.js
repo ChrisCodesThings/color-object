@@ -6,7 +6,7 @@ import rgbaToHex from '@chriscodesthings/rgba-color-to-css-hex';
 import colorFade from '@chriscodesthings/rgb-color-fade';
 
 export default class Color {
-    #rgba = [];
+    #rgba = [0, 0, 0, 1];
 
     constructor(col = randomHexColor(true)) {
         if (typeof col === 'boolean') {
@@ -33,7 +33,7 @@ export default class Color {
             return true;
         }
 
-        this.#rgba = [0, 0, 0, 1];
+        return false;
     }
 
     asRGBA() { return this.#rgba; }
