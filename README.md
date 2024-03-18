@@ -8,12 +8,6 @@
 npm install --save @chriscodesthings/color-object
 ```
 
-# Sections &middot; [Top](#color-object---- "Top")
-
-- [Constructor](#constructor--sections "Constructor")
-- [Examples](#examples--sections "Examples")
-- [Methods](#methods--sections "Methods")
-
 ## Description
 
 The color object stores a color and provides methods for expressing the color in different formats and manipulating the color in different ways.
@@ -21,7 +15,15 @@ The color object stores a color and provides methods for expressing the color in
 - **Coercible** - use as a string to return a CSS hex color code.
 - **JSON Compatible** - use JSON.stringify to export color as a CSS hex color code.
 
-## Constructor &middot; [Sections](#sections--top)
+# Sections
+
+- [Constructor](#constructor--sections "Constructor")
+- [Examples](#examples--sections "Examples")
+- [Methods](#methods--sections "Methods")
+
+---
+
+## Constructor &middot; [Sections](#sections "Back to Sections")
 
 ### Syntax
 
@@ -40,7 +42,7 @@ A specific color can be specified as a CSS hex color code or as an array.
 
 > Note, if an invalid color is specified, the color defaults to black.
 
-## Examples &middot; [Sections](#sections--top)
+## Examples &middot; [Sections](#sections  "Back to Sections")
 
 ### Random Colors
 
@@ -71,17 +73,17 @@ new Color([100, 149, 237]); // cornflowerblue
 new Color([100, 149, 237, 0.5]); // cornflowerblue with 50% transparency
 ```
 
-# Methods &middot; [Sections](#sections--top)
+# Methods &middot; [Sections](#sections "Back to Sections")
 
-- [constructor()](#constructor--sections) - create the `Color` object
-- [set()](#setcolor--methods) - set the color
-- [asHex()](#ashex--methods) - output as CSS hex color code
-- [asRGBA()](#asrgba--methods) - output as RGBA array
-- [fade()](#fadepct--methods) - fade the color
+- [constructor()](#constructor--sections "Read about constructor()") - create the `Color` object
+- [set()](#setcolor--methods "Read about set()") - set the color
+- [asHex()](#ashex--methods "Read about asHex()") - output as CSS hex color code
+- [asRGBA()](#asrgba--methods "Read about asRGBA()") - output as RGBA array
+- [fade()](#fadepct--methods "Read about fade()") - fade the color
 
 ---
 
-## set(color) &middot; [Methods](#methods--sections)
+## set(color) &middot; [Methods](#methods--sections "Back to Methods")
 
 ### Description
 
@@ -109,7 +111,7 @@ Returns boolean `true` on success, `false` if the color provided isn't valid.
 
 ---
 
-## asHex() &middot; [Methods](#methods--sections)
+## asHex() &middot; [Methods](#methods--sections "Back to Methods")
 
 ### Description
 
@@ -130,7 +132,7 @@ Returns a string containing CSS hex color code.
 
 ---
 
-## asRGBA() &middot; [Methods](#methods--sections)
+## asRGBA() &middot; [Methods](#methods--sections "Back to Methods")
 
 ### Description
 
@@ -153,7 +155,7 @@ Returns array containing `[red, green, blue, alpha]` values.
 
 ---
 
-## fade(pct) &middot; [Methods](#methods--sections)
+## fade(pct) &middot; [Methods](#methods--sections "Back to Methods")
 
 ### Description
 
