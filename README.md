@@ -101,7 +101,7 @@ console.log(col.set([100, 149, 237]));  // cornflowerblue
 ### Parameters
 - *color*: the color to set
 
-The color can be provided using the same rules as [Constructor](#constructor "Constructor").
+The color can be provided using the same rules as [Constructor](#constructor--sections "Read about constructor()").
 
 ### Returns
 
