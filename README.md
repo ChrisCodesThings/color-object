@@ -155,7 +155,7 @@ Returns array containing `[red, green, blue, alpha]` values.
 
 ---
 
-## fade(pct) &middot; [Methods](#methods--sections "Back to Methods")
+## fade(by) &middot; [Methods](#methods--sections "Back to Methods")
 
 ### Description
 
@@ -166,15 +166,12 @@ Fades a color towards black or white by a given percentage.
 ```js
 const col = new Color([100, 149, 237]); // cornflowerblue
 
-console.log(col.fade(-50));
+console.log(col.fade(-50)); // fade 50% towards black
 // => #324b77
 ```
 
 ### Parameters
-- *pct*: the amount to fade the color by given as a percentage
-
-Positive numbers fade towards white, negative numbers fade towards black.
-100 will produce white, -100 will produce black.
+- *by*: a percentage from -100 to 100. Negative values fade towards black, positive towards white.
 
 ### Returns
 
