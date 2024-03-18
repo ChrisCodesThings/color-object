@@ -58,7 +58,7 @@ describe("test output conversion", () => {
     });
 });
 
-describe("test class integration methods", () => {
+describe("test exports", () => {
     const col = new Color([100, 149, 237, 0.5]);
 
     test("object identifier", () => {
@@ -74,7 +74,7 @@ describe("test class integration methods", () => {
     });
 });
 
-describe("test colour functions", () => {
+describe("test fading functions", () => {
     test("darken 50%", () => {
         const col = new Color([200, 100, 50]);
         expect(col.fade(-50)).toEqual(rgbaToHex([100, 50, 25]));
